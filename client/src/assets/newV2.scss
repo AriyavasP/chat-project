@@ -1,0 +1,362 @@
+$boxchat-width: 400px; //400
+$boxchat-hight: 670px; //670
+
+$basecolor-black: #000;
+$basecolor-red: #ff0000;
+$basecolor-white: #fff;
+$basecolor-yellow: #ffff00;
+
+.chatV2 {
+  font-family: "Courier New", Courier, monospace;
+  /* Chatbox Container */
+  .chatbox-container {
+    width: $boxchat-width;
+    height: $boxchat-hight;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Chatbox Header */
+    .chatbox-header {
+      display: flex;
+      padding: 10px 30px 10px 30px;
+      background-color: $basecolor-black;
+      color: $basecolor-white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Chatbox Messages */
+    .chatbox-messages {
+      height: 75%;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+
+    .chatbox-messages::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Chatbox Message */
+    .chatbox-message {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .chatbox-message img {
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .chatbox-message p {
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 90%;
+      word-wrap: break-word;
+    }
+
+    /* Chatbox Received Message */
+    .chatbox-message.received img {
+      order: 1;
+    }
+
+    .chatbox-message.received p {
+      order: 2;
+    }
+
+    /* Chatbox Sent Message */
+    .chatbox-message.sent img {
+      order: 3;
+    }
+
+    .chatbox-message.sent p {
+      order: 4;
+      background-color: $basecolor-red;
+      color: $basecolor-white;
+      align-self: flex-end;
+    }
+
+    /* Chatbox Input */
+    .chatbox-input {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .chatbox-input input {
+      flex-grow: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      background-color: #eee;
+    }
+
+    .chatbox-input button {
+      padding: 10px;
+      border: none;
+      border-radius: 50%;
+      background-color: $basecolor-black;
+      color: $basecolor-white;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  /* topic Container */
+  .top-container {
+    width: $boxchat-width;
+    height: $boxchat-hight;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Chatbox Header */
+    .top-header {
+      display: flex;
+      padding: 10px 30px 10px 30px;
+      background-color: $basecolor-black;
+      color: $basecolor-white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-content {
+      height: 75%;
+      overflow-y: scroll;
+      padding: 10px;
+
+      .top-content-box {
+        display: flex;
+        font-size: 20px;
+        height: auto;
+        border-bottom: $basecolor-black solid 1px;
+        align-items: center;
+        padding: 10px;
+        transition: all ease 0.2s;
+
+        .text-position {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+      }
+
+      .top-content-box:hover {
+        color: $basecolor-red;
+        margin: 5px;
+        cursor: zoom-in;
+      }
+    }
+
+    .top-content::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  /* Faqsbox Container */
+  .faqs-container {
+    width: $boxchat-width * 2;
+    height: $boxchat-hight;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: zoomout 2s;
+    /* Chatbox Header */
+    .faqs-header {
+      display: block;
+      padding: 10px 30px 10px 30px;
+      background-color: $basecolor-black;
+      color: $basecolor-white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      justify-content: start;
+      align-items: center;
+    }
+    .faqs-content {
+      height: 75%;
+      overflow-y: scroll;
+      padding: 15px;
+
+      .faqs-content-box {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        word-wrap: break-word;
+        margin-bottom: 15px;
+        border-bottom: $basecolor-black solid 1px;
+        transition: 1s;
+      }
+
+      .faqs-content-box:hover {
+        scale: 0.95;
+        background-color: rgba($color: $basecolor-white, $alpha: 0.8);
+        border-radius: 15px;
+        padding: 15px;
+      }
+    }
+
+    .faqs-content::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  /* GroupQAbox Container */
+  .groupQA-container {
+    width: $boxchat-width * 1.5;
+    height: $boxchat-hight;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: zoomout 1s;
+    .groupQA-header {
+      display: flex;
+      padding: 10px 30px 10px 30px;
+      background-color: $basecolor-black;
+      color: $basecolor-white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      justify-content: space-between;
+      align-items: center;
+
+      .search {
+        height: 20px;
+        width: 120px;
+        border-radius: 25px;
+        background-color: rgba($color: $basecolor-black, $alpha: 0.6);
+        color: $basecolor-white;
+      }
+
+      ::placeholder {
+        color: $basecolor-white;
+        opacity: 1; /* Firefox */
+      }
+    }
+
+    .groupQA-content {
+      height: 75%;
+      overflow-y: scroll;
+      padding: 10px;
+      .groupQA-content-box {
+        margin: 10px;
+        padding-left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        border: $basecolor-black solid 1px;
+        background-color: rgba($color: $basecolor-white, $alpha: 1);
+        scale: 0.9;
+        border-radius: 10px;
+        word-wrap: break-word;
+        transition: all 1s;
+      }
+
+      .groupQA-content-box:hover {
+        scale: 1;
+        cursor: pointer;
+      }
+    }
+
+    .groupQA-content::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @keyframes zoomout {
+    0% {
+      width: $boxchat-width;
+    }
+  }
+
+  @keyframes lightRGB {
+    33% {
+      color: $basecolor-red;
+      text-shadow: 2px 2px $basecolor-white;
+    }
+    66% {
+      color: $basecolor-white;
+      text-shadow: 2px 2px $basecolor-yellow;
+    }
+    99% {
+      color: $basecolor-yellow;
+      text-shadow: 2px 2px $basecolor-red;
+    }
+  }
+
+  .loaderV2 {
+    .lds-interface {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background-color: $basecolor-black;
+      width: $boxchat-width;
+      height: $boxchat-hight;
+      position: absolute;
+      z-index: 1;
+      animation: fade 2.5s;
+
+      .wave {
+        width: 5px;
+        height: 100px;
+        background: linear-gradient(45deg, #ff0000, $basecolor-black);
+        margin: 10px;
+        animation: wave 1s linear infinite;
+        border-radius: 20px;
+      }
+      .wave:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .wave:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .wave:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .wave:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .wave:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .wave:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      .wave:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      .wave:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+      .wave:nth-child(10) {
+        animation-delay: 0.9s;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+    }
+
+    @keyframes fade {
+      100% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+      30% {
+        transform: scale(0.8);
+        opacity: 0.9;
+      }
+    }
+  }
+}

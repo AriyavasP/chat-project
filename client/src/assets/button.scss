@@ -1,0 +1,104 @@
+.icon-Chevron-Left {
+  .gg-chevron-left-r {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 4px;
+  }
+
+  .gg-chevron-left-r::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    left: 7px;
+    top: 6px;
+  }
+
+  .gg-chevron-left-r:hover {
+    cursor: pointer;
+  }
+}
+
+.icon-active {
+  .gg-bot {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 21px;
+    height: 10px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 0 0 2px, -4px 0 0 -1px, 4px 0 0 -1px, inset 0 -4px 0 -2px;
+  }
+  .gg-bot::after,
+  .gg-bot::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 0 2px;
+    top: 3px;
+  }
+  .gg-bot::before {
+    left: -4px;
+    border-radius: 3px;
+  }
+  .gg-bot::after {
+    border-radius: 100px;
+    right: -4px;
+  }
+}
+
+.icon-group {
+  .gg-info {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+    border-radius: 40px;
+  }
+
+  .gg-info::after,
+  .gg-info::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    background: currentColor;
+    left: 7px;
+  }
+
+  .gg-info::after {
+    bottom: 2px;
+    height: 8px;
+  }
+
+  .gg-info::before {
+    height: 2px;
+    top: 2px;
+  }
+
+  .gg-info:hover {
+    cursor: help;
+  }
+}

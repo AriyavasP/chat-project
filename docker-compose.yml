@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  api:
+    build: ./server
+    ports:
+      - "3000:3000"
+    environment:
+        MONGO_USERNAME: ariyavas 
+        MONGO_PASSWORD: Fivelpzaza1
+        ACCESS_TOKEN_SECRET: EiKf9vBVMW0Qiu6EWgzwU7PyCdD0BLxv7ks4kTe4fXvGPDYsS3QT3wugV4ReGopt 
+        REFRESH_TOKEN_SECRET: 0ueUlWRDDjvu7188rORSqZVuwWUVvJSyPGWw84J3HxgWmW9VKRP4RFzW2Imvb1Jr
+        OPENAI_API_KEY: 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
+        SERVER_URL: 3000
+    networks:
+      - mynetwork
+  web:
+    build: ./client
+    ports:
+      - "8080:8080"
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+    driver: bridge

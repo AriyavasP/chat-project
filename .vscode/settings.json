@@ -1,0 +1,4 @@
+{
+    "dotenv.enableAutocloaking": false,
+    "CodeGPT.model": "gpt-4"
+}
